@@ -19,3 +19,11 @@ Test=Metro.tail(int(0.3*len(Metro)))
 #Metro.to_csv("stations_metro2.csv", index=False, encoding='utf-8-sig',sep=';')
 #Train.to_csv("stations_metro2.csv", index=False, encoding='utf-8-sig',sep=';')
 #Test.to_csv("stations_metro2.csv", index=False, encoding='utf-8-sig',sep=';')
+
+#Question 2
+numeric_df = df.select_dtypes(include=['number'])
+print(numeric_df.columns)
+print(numeric_df.describe())
+
+correlations = numeric_df.corr()
+print(correlations)
